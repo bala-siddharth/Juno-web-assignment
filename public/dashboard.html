@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <link href="../src/index.css" rel="stylesheet"></link>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4b4968421e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navabar-account" id="navbarNavAltMarkup">
+        <ul class="unlist-account">
+            <li class="img-list">
+                <img src="../images/unnamed (1).png" alt="" class="juno-logo">
+            </li>
+            <li class="list-account">
+                <div class="top-account" data-target="eachListAccount">
+                    <span class="account-content-head">Overview</span>
+                </div>
+            </li>
+            <li class="list-account">
+                <div class="top-account" data-target="eachListAccount">
+                    <span class="account-content-head">Onboarding</span>
+                </div>
+            </li>
+            <li class="list-account" data-detail-id="detailID1">
+                <div class="top-account" data-target="eachListAccount">
+                    <span class="account-content-head">Monitoring</span>
+                </div>
+            </li>
+            <li class="list-account">
+                <div class="top-account" data-target="eachListAccount">
+                    <span class="account-content-head">Flagging</span>
+                </div>
+            </li>
+            <li class="list-account">
+                <div class="top-account" data-target="eachListAccount">
+                    <span class="account-content-head">Source of Income</span>
+                </div>
+            </li>
+            <li class="list-account">
+                <div class="top-account" data-target="eachListAccount">
+                    <span class="account-content-head">UAR</span>
+                </div>
+            </li>
+        </ul>
+        <div class="user-profile-details">
+            <img src="../images/file.png" alt="" class="user-img">
+            <div class="sub-container-pro">
+                <li id="railUserName" class="user-name"></li>
+                <li id="railUserEmail"></li>
+            </div>
+        </div>
+    </div>
+    <div class="detail-list-container">
+        <li class="detailed-list-account" id="detailID1">
+            <span class="detail-top-head-name">Monitoring</span>
+            <div class="sectional-tabbar-cont">
+                <div class="sectional_tabbar">
+                    <div class="pending" id="pending">
+                        <p>Pending</p>
+                    </div>
+                    <div class="complted" id="complted">
+                        <p>Completed</p>
+                    </div>
+                </div>
+                <div class="close-account" id="hideDisplayFeatAcc">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                    <p>Close account</p>
+                </div>
+                <div id="backgroundFeatueBox" class="background-Featue-Box">
+                    <div id="displayFeaturesInAcc" class="box-feature features-acc">
+                        <div class="close-acc-head">
+                            <h5>Close account</h5>
+                            <i class="fa-solid fa-x" id="closeIcon"></i>
+                        </div>
+                        <div class="frame20324">
+                            <div class="frame20324_one">
+                                <label class="frame20324_one_label">Email</label>
+                                <input type="email" data-key="email" class="frame20324_input" id="frameEmailField">
+                            </div>
+                            <div class="frame20324_tw0">
+                                <p>Want to file UAR</p>
+                                <div class="uar_container">
+                                    <label for="UARYes">
+                                        <input type="radio" name="UAR" id="UARYes" data-key="UAR" value="yes" class="custom-radio">
+                                        Yes
+                                    </label>
+                                    <label for="UARNo">
+                                        <input type="radio" name="UAR" id="UARNo" data-key="UAR" value="no" class="custom-radio ml-2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="frame20324_three">
+                                <label class="frame20324_one_label">Reason</label>
+                                <select name="selectReason"  id="selectReason" class="frame20324_input" type="dropdown">
+                                    <option value=""></option>
+                                    <option value="Flagging logics triggered">Flagging logics triggered</option>
+                                    <option value="Closed logics triggered">Closed logics triggered</option>
+                                    <option value="SOI requested logics triggered">SOI requested logics triggered</option>
+                                </select>
+                            </div>
+                            <div class="frame20324_four">
+                                <label class="frame20324_one_label">Note</label>
+                                <input type="email" data-key="email" class="frame20324_input" id="frameEmailField">
+                            </div>
+                            <div class="frame20324_five">
+                                <div class="chargefee">
+                                    <label for="ChargeFee">
+                                        <input type="radio" name="Charge" id="ChargeFee" data-key="ChargeFee" value="Charge" class="custom-radio">
+                                        Charge closure fee
+                                    </label>
+                                </div>
+                                <div class="frame20324_closeacc">
+                                    <p>Close Account</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container">
+                <div class="search-input d-flex flex-column">
+                    <input type="text" class="searchinput-form-box" id="searchField" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="trigger-reason">
+                    <div class="trigger-name" id="trigger">
+                        <p>Trigger reason</p>
+                        <i class="fa-solid fa-chevron-down fa-sm" id="trigeerIcon"></i>
+                    </div>
+                    <ul class="trigger-items" id="triggerCont">
+                        <li>Hard flag</li>
+                        <li>Temp flag</li>
+                        <li>Restricted unflag</li>
+                        <li>Un flag</li>
+                        <li>Reviewed</li>
+                    </ul>
+                </div>
+                <div class="risk-level">
+                    <div class="trigger-name">
+                        <p>Risk level</p>
+                        <i class="fa-solid fa-chevron-down fa-sm"></i>
+                    </div>
+                <div></div>
+            </div>
+            <div class="frame20329" id="frame20329">
+                <div id="listContainer" class="list-container"></div>
+            </div>
+            <div id="frame20330" class="frame20330">
+                <div id="listContainerComplted" class="list-container-complted"></div>
+            </div>
+        </li>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script src="../src/dashboard.js"></script>
+    <script src="../src/data.js"></script>
+</body>
